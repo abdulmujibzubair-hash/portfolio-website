@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zubair Abdulmujib — Frontend Developer</title>
+  <meta name="description" content="Zubair Abdulmujib Omodolapo — frontend developer building friendly, mobile-responsive websites." />
+  <meta property="og:title" content="Zubair Abdulmujib — Frontend Developer" />
+  <meta property="og:description" content="Frontend developer building friendly and mobile-responsive websites." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root{
+      --bg:#0b1020; --card:#0f1724; --muted:#9aa4b2; --accent:#66e3b5; --glass: rgba(255,255,255,0.03);
+      --ff-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    [data-theme="light"]{
+      --bg:#f6f8fb; --card:#ffffff; --muted:#475569; --accent:#0ea5a4; --glass: rgba(11,17,32,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:var(--ff-sans);background:var(--bg);color:color-mix(in srgb, white 95%, var(--bg));-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:1000px;margin:0 auto;padding:28px}
+
+    /* header */
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:54px;height:54px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#8be9d8);font-weight:700;color:#052;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    nav{display:flex;gap:16px;align-items:center}
+    .cta{padding:8px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7feacb);color:#042;font-weight:600}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start;margin-bottom:28px}
+    .card{background:var(--card);padding:22px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .intro h1{margin:0 0 8px;font-size:28px}
+    .intro p{margin:0;color:var(--muted);line-height:1.6}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:8px;font-size:13px;color:var(--muted)}
+
+    .avatar{display:grid;place-items:center;height:100%;border-radius:10px}
+    .avatar svg{width:100%;height:auto;border-radius:8px}
+
+    /* projects */
+    .projects{display:grid;gap:14px;margin-top:18px}
+    .project{display:flex;gap:14px;align-items:center;padding:14px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
+    .project .meta{flex:1}
+    .project h3{margin:0;font-size:16px}
+    .project p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+    /* footer */
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* responsive */
+    @media (max-width:860px){
+      .hero{grid-template-columns:1fr}
+      nav{display:none}
+    }
+
+    /* small helpers */
+    .row{display:flex;gap:12px;align-items:center}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 10px;border-radius:8px}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body data-theme="dark">
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">ZTH</div>
+        <div>
+          <div style="font-weight:700">Zubayr Tech Hub</div>
+          <div class="muted" style="font-size:13px">Frontend Developer • Full-stack learner</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" class="btn-ghost">Toggle</button>
+        <a class="cta" href="https://zubairacademy.netlify.app" target="_blank">Live Site</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card intro">
+          <h1>I'm <span style="color:var(--accent)">Zubayr Abdulmujib Omodolapo</span></h1>
+          <p>I'm a frontend developer passionate about building friendly and mobile responsive websites. I focus on clear UX, fast-loading pages, and clean code.</p>
+
+          <div id="skills" style="margin-top:16px">
+            <div style="font-weight:600;margin-bottom:8px">Skills</div>
+            <div class="skills">
+              <div class="skill">HTML</div>
+              <div class="skill">CSS (Flex & Grid)</div>
+              <div class="skill">JavaScript (ES6+)</div>
+              <div class="skill">Responsive Design</div>
+              <div class="skill">Git & GitHub</div>
+              <div class="skill">Netlify Deployments</div>
+            </div>
+          </div>
+
+          <div style="margin-top:18px" id="projects">
+            <div style="font-weight:600;margin-bottom:8px">Projects</div>
+            <div class="projects">
+              <article class="project">
+                <div class="meta">
+                  <h3>ZubairAcademy (Landing)</h3>
+                  <p class="muted">A multi-page academy landing site. Deployed on Netlify. <a href="https://zubairacademy.netlify.app" target="_blank">Live</a> • <a href="https://github.com/abdulmujibzubair-hash/digital-product" target="_blank">Source</a></p>
+                </div>
+                <div style="min-width:94px;text-align:right;color:var(--muted)">HTML • CSS • JS</div>
+              </article>
+
+              <article class="project">
+                <div class="meta">
+                  <h3>Opay Website</h3>
+                  <p class="muted">Multi-page opay site used to inform customers about their services. Deployed on Netlify.   <br><a href="https://zubairacademy.netlify.app" target="_blank">Live</a> • <a href="https://zubairacademy" target=_blank">Source</a></p>
+                </div>
+                <div style="min-width:94px;text-align:right;color:var(--muted)">HTML • CSS</div>
+              </article>
+
+            </div>
+          </div>
+
+        </div>
+
+        <aside class="card avatar">
+          <!-- Simple SVG avatar placeholder -->
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#66e3b5" />
+                <stop offset="1" stop-color="#8be9d8" />
+              </linearGradient>
+            </defs>
+            <rect width="200" height="200" rx="16" fill="#07121a" />
+            <g transform="translate(100,100)">
+              <circle r="34" fill="url(#g)" />
+              <circle r="28" fill="#07121a" />
+              <g transform="translate(-10,10)" fill="#cfeef0">
+                <rect x="-26" y="20" width="52" height="28" rx="8" />
+              </g>
+            </g>
+          </svg>
+
+          <div style="margin-top:12px;text-align:center">
+            <div style="font-weight:700">Zubayr A. Omodolapo</div>
+            <div class="muted" style="font-size:13px">Frontend Developer</div>
+            <div style="margin-top:10px">
+              <a href="mailto:abdulmujibzubair@gmail.com" class="btn-ghost">Email</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="card" id="contact" style="margin-top:18px">
+        <h2 style="margin-top:0">Contact</h2>
+        <p class="muted">Want to work together or view more projects? Reach out — I reply fast.</p>
+        <div style="margin-top:12px" class="row">
+          <a href="mailto:abdulmujibzubair@gmail.com" class="cta">Email Me</a>
+          <a href="https://github.com/abdulmujibzubair-hash" target="_blank" class="btn-ghost">GitHub</a>
+          <a href="https://www.linkedin.com" target="_blank" class="btn-ghost">LinkedIn</a>
+          <a href="https://wa.me/2349015174769" target="" class="cta">whatsapp</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="muted">Built by Zubair • Hosted on Netlify • <span id="year"></span></div>
+    </footer>
+  </div>
+
+  <script>
+    // small helpers: theme, year
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const body = document.body;
+    themeToggle.addEventListener('click', ()=>{
+      const current = body.getAttribute('data-theme');
+      body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // simple mobile nav fallback: show nav on small screens when tapped
+    // (kept minimal — add a hamburger if you want)
+  </script>
+</body>
+</html>
